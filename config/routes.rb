@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  # root "sessions#new"
   root "decks#index"
 
   get "/decks", to: "decks#index", as: 'decks'
@@ -18,5 +17,5 @@ Rails.application.routes.draw do
 
   post '/cards/:card_id/guesses', to: 'guesses#create'
 
-
+  get '/users/:id', to: 'users#show'
 end

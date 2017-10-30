@@ -8,8 +8,8 @@ end
 Deck.create(name: "Rails it Up Yo")
 
 Card.create(
-  question: "What is Rails tho?",
-  answer: "A server-side web app framework written in Ruby",
+  question: "What is the most magical Heroku command?",
+  answer: "heroku run bash",
   deck_id: 1
   )
 Card.create(

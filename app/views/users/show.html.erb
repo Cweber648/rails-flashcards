@@ -1,0 +1,14 @@
+<div>
+  <h2>Hello <%= @user.username %></h2>
+
+    <% if @user.rounds.any? %>
+      <% @user.rounds.each do |round| %>
+        <ul>
+          <li>You played <%= round.deck.name %>!</li>
+          <li>You got <%= round.first_guess_correct %>/<%= round.deck.cards.count %> correct on the first guess!</li>
+          <li>...............nice.</li>
+        </ul>
+      <% end %>
+    <% end %>
+
+</div>
