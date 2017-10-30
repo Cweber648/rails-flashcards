@@ -1,7 +1,6 @@
 class RoundsController < ApplicationController
   def show
     @round = Round.find(params[:id])
-    @card = @round.prepare_card
   end
 
   def create
