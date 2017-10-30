@@ -14,7 +14,7 @@
       <ul>
         <li><%= link_to "home", '/' %></li>
       <% if current_user %>
-        <li><%= current_user.username %></li>
+        <li><%= link_to current_user.username, "/users/#{current_user.id}" %></li>
         <li><%= link_to "logout", '/logout' %></li>
       <% else %>
         <li><%= link_to "signup", '/signup' %></li>

@@ -1,7 +1,14 @@
 <div>
-  <p><%= @card.question %></p>
-  <%= form_tag("/cards/#{@card.id}/guesses", method: "post")  do %>
-  <%= text_field_tag(:answer) %>
-  <%= submit_tag %>
-  <% end  %>
+  <% if !@round.all_donesies? %>
+
+    <p><%= @card.question %></p>
+      <%= form_tag("/cards/#{@card.id}/guesses", method: "post")  do %>
+      <%= text_field_tag(:answer) %>
+      <%= submit_tag %>
+    <% end  %>
+
+  <% else %>
+    <h1>Ya did it Mate!</h1>
+    <p>You got <%= @round.first_guess_correct %>/<%= @round.deck.cards.count %> questions correctly on the first try. Good on ye Mate!</p>
+  <% end %>
 </div>

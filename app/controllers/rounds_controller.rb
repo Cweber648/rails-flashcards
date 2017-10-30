@@ -1,7 +1,9 @@
 class RoundsController < ApplicationController
   def show
     @round = Round.find(params[:id])
-    @card = @round.prepare_card
+    if !@round.all_donesies?
+      @card = @round.prepare_card
+    end
   end
 
   def create
