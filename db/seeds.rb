@@ -42,3 +42,8 @@ Guess.create(is_correct: true, card_id: 5, round_id: 1)
 Guess.create(is_correct: true, card_id: 2, round_id: 1)
 Guess.create(is_correct: true, card_id: 3, round_id: 1)
 
+Round.create(user_id: 1, deck_id: 1)
+Guess.create(is_correct: true, card_id: 1, round_id: 2)
+Guess.create(is_correct: false, card_id: 2, round_id: 2)
+Guess.create(is_correct: false, card_id: 3, round_id: 2)
+Guess.create(is_correct: false, card_id: 4, round_id: 2)
