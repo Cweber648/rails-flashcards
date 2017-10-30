@@ -1,3 +1,4 @@
+require 'faker'
 5.times do
   user = User.new(username: Faker::Internet.user_name(Faker::RickAndMorty.character), password: "password")
   user.email = Faker::Internet.safe_email(user.username)
