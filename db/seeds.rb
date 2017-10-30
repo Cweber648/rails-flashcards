@@ -1,9 +1,9 @@
-require 'faker'
-5.times do
-  user = User.new(username: Faker::Internet.user_name(Faker::RickAndMorty.character), password: "password")
-  user.email = Faker::Internet.safe_email(user.username)
-  user.save
-end
+# require 'faker'
+# 5.times do
+#   user = User.new(username: Faker::Internet.user_name(Faker::RickAndMorty.character), password: "password")
+#   user.email = Faker::Internet.safe_email(user.username)
+#   user.save
+# end
 
 Deck.create(name: "Rails it Up Yo")
 
@@ -33,18 +33,18 @@ Card.create(
   deck_id: 1
   )
 
-Round.create(user_id: 1, deck_id: 1)
+# Round.create(user_id: 1, deck_id: 1)
 
-Guess.create(is_correct: true, card_id: 1, round_id: 1)
-Guess.create(is_correct: false, card_id: 2, round_id: 1)
-Guess.create(is_correct: false, card_id: 3, round_id: 1)
-Guess.create(is_correct: true, card_id: 4, round_id: 1)
-Guess.create(is_correct: true, card_id: 5, round_id: 1)
-Guess.create(is_correct: true, card_id: 2, round_id: 1)
-Guess.create(is_correct: true, card_id: 3, round_id: 1)
+# Guess.create(is_correct: true, card_id: 1, round_id: 1)
+# Guess.create(is_correct: false, card_id: 2, round_id: 1)
+# Guess.create(is_correct: false, card_id: 3, round_id: 1)
+# Guess.create(is_correct: true, card_id: 4, round_id: 1)
+# Guess.create(is_correct: true, card_id: 5, round_id: 1)
+# Guess.create(is_correct: true, card_id: 2, round_id: 1)
+# Guess.create(is_correct: true, card_id: 3, round_id: 1)
 
-Round.create(user_id: 1, deck_id: 1)
-Guess.create(is_correct: true, card_id: 1, round_id: 2)
-Guess.create(is_correct: false, card_id: 2, round_id: 2)
-Guess.create(is_correct: false, card_id: 3, round_id: 2)
-Guess.create(is_correct: false, card_id: 4, round_id: 2)
+# Round.create(user_id: 1, deck_id: 1)
+# Guess.create(is_correct: true, card_id: 1, round_id: 2)
+# Guess.create(is_correct: false, card_id: 2, round_id: 2)
+# Guess.create(is_correct: false, card_id: 3, round_id: 2)
+# Guess.create(is_correct: false, card_id: 4, round_id: 2)
