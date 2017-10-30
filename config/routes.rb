@@ -7,5 +7,13 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  root "sessions#new"
+  # root "sessions#new"
+  root "decks#index"
+
+  get "/decks", to: "decks#index", as: 'decks'
+  get '/decks/:id', to: 'decks#show', as: 'deck'
+
+  get '/rounds/:id', to: 'rounds#show', as: 'round'
+  post '/decks/:deck_id/rounds', to: 'rounds#create'
+
 end
