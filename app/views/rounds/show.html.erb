@@ -1,0 +1,7 @@
+<div>
+  <p><%= @card.question %></p>
+  <%= form_tag("/cards/#{@card.id}/guesses", method: "post")  do %>
+  <%= text_field_tag(:answer) %>
+  <%= submit_tag %>
+  <% end  %>
+</div>

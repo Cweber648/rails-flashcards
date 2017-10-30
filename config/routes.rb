@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get '/rounds/:id', to: 'rounds#show', as: 'round'
   post '/decks/:deck_id/rounds', to: 'rounds#create'
 
+  post '/cards/:card_id/guesses', to: 'guesses#create'
+
+
 end
